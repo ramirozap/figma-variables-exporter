@@ -1,0 +1,16 @@
+{
+  "name": "Design tokens exporter",
+  "id": "1349427060259030534",
+  "api": "1.0.0",
+  "main": "dist/main.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": ["figma", "dev"],
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  },
+
+  "menu": [{ "command": "export", "name": "Export Variables" }],
+  "ui": { "export": "export.html" },
+  "documentAccess": "dynamic-page"
+}
