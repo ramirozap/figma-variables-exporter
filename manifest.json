@@ -3,7 +3,7 @@
   "id": "1349427060259030534",
   "api": "1.0.0",
   "main": "dist/main.js",
-  "capabilities": [],
+  "capabilities": ["inspect"],
   "enableProposedApi": false,
   "editorType": ["figma", "dev"],
   "networkAccess": {

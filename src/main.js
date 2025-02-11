@@ -1,5 +1,17 @@
 // this plugin obtains all the variables from the selected page and outputs them in css format
 
+const fontWeightsMap = {
+  thin: 100,
+  extralight: 200,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+};
+
 async function getCollections() {
   const localVariables =
     await figma.variables.getLocalVariableCollectionsAsync();
@@ -58,7 +70,11 @@ async function processCollection({ modes, variableIds }) {
               cssValue = `${value}px`;
               break;
             default:
-              cssValue = value.toLowerCase();
+              if (value.toLowerCase() in fontWeightsMap) {
+                cssValue = fontWeightsMap[value.toLowerCase()];
+              } else {
+                cssValue = value.toLowerCase();
+              }
               break;
           }
         }
